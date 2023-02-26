@@ -13,6 +13,7 @@ h3 {
 }
 
 h1 {
+  text-align: center;
   color: whitesmoke;
   font-size: 1.75em;
 }
@@ -32,6 +33,7 @@ p {
 }
 
 .subheading {
+  text-align: center;
   display: block;
   font-size: 0.75rem;
   color: #d0aaff;
@@ -125,8 +127,29 @@ footer {
   text-align: center;
   color: #5f29a3;
 }
+/* ----- NAVIGATION ----- */
+nav a {
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.85em 0;
+  display: block;
+}
 
-/* Media queries */
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+li {
+  padding-block: 1em;
+}
+
+li:not(:last-child) {
+  border-bottom: 1px dotted #a190b6;
+}
+
+/* ----- Media queries ----- */
 @media (min-width: 580px) {
 .section-two-image-container {
   display: flex;
@@ -149,14 +172,27 @@ footer {
   }
   h1 {
     font-size: 2.25em;
+    text-align: left;
   }
   h2 {
     font-size: 1.75rem;
   }
   .subheading {
     font-size: 1.25rem;
+    text-align: left;
   }
   p {
     font-size: 1.125rem;
+  }
+  nav ul{
+    display: flex;
+    gap: 1em;
+  }
+  header .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  li:not(:last-child) {
+    border-bottom: none;
   }
 }
